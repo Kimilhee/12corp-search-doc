@@ -169,13 +169,15 @@
     - node make-auto-comp-data.js -c xxx (loc / dev / prd)
 
 ---
-### napoli git branches
- * branch
+### node 버전 업그레이드(prd서버)
+ * napoli git branches
     - master: trunk 에 해당.
     - dev: DEV 에 해당
     - nodeUpgrade: local 및 dev 서버에 올려서 테스트 할 용.
-    - node version upgarde를 dev 서버까지만 함.
-    - production 서버 node를 최신으로 upgrade 하려면 package.json에서 elasticsearch와 ffi로 변경하고 해야 함.
+
+
+ * 현재 node 5.x version upgarde를 dev 서버까지만 함.
+ * production 서버 node를 최신으로 upgrade 하려면 package.json에서 elasticsearch와 ffi로 변경하고 해야 함.
     ```json
         "elasticsearch": "^10.0",
         "ffi": "^2.0",
