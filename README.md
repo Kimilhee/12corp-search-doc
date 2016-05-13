@@ -19,13 +19,13 @@
 ### 검색 서버 접속
 
 * 검색 개발 서버 접속(node + mongodb + elasticsearch): pasta admin / 검색 개발 서버
-    ssh -i .ssh/12corp.pem ec2-user@dev.pasta.12corp.com
+    - ssh -i .ssh/12corp.pem ec2-user@dev.pasta.12corp.com
 
 * 검색 리얼 서버 접속(node + elasticsearch): 검색 담당
-    ssh -i .ssh/12corp.pem ec2-user@api.pasta.12corp.com
+    - ssh -i .ssh/12corp.pem ec2-user@api.pasta.12corp.com
 
 * 파스타 리얼 서버 접속(node + mongodb): pasta admin 담당
-    ssh -i .ssh/12corp.pem ec2-user@pasta.12corp.com
+    - ssh -i .ssh/12corp.pem ec2-user@pasta.12corp.com
 
 ```sh
     aws 이전 password 방식으로 접속했을 때:
