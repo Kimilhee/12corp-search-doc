@@ -44,7 +44,7 @@
 
  - 주요 쿼리:
    ```json
-   "* 모든 인덱스 보기]"
+   "* 모든 인덱스 보기"
    GET _cat/indices?v
 
    "* 인덱스 필터링 해서 보기"
@@ -138,7 +138,7 @@
     - `napoli/pickle/search` (검색 서버 모듈)
     - `napoli/pasta/search` (검색 테스트 클라이언트 모듈)
     - queryType(xxx)별 `pickle/search/qm/xxx-query-maker.js` 할당.
-    - resultType (`pickle/search/esult-data-maker.js`)
+    - resultType (`pickle/search/result-data-maker.js`)
 
 
  * 주요 검색 서버 controllers
