@@ -2,7 +2,8 @@
 
 # 검색 서버 문서
 
-## 검색서버 관련 주요 구성요소(사용기술)
+---
+### 검색서버 관련 주요 구성요소(사용기술)
 
 * nodejs + express :
 * elasticsearch: fulltext search engin으로 실질적인 검색 DB 역할을 함.
@@ -15,7 +16,25 @@
  elasticsearch query 생성 -> elasticsearch query 실행 -> 결과를 data-result-maker로 필터링해서 반환.
 
 ---
-## 검색 관련 툴
+### 검색 서버 접속
+
+* 검색 개발 서버 접속(node + mongodb + elasticsearch): pasta admin / 검색 개발 서버
+    ssh -i .ssh/12corp.pem ec2-user@dev.pasta.12corp.com
+
+* 검색 리얼 서버 접속(node + elasticsearch): 검색 담당
+    ssh -i .ssh/12corp.pem ec2-user@api.pasta.12corp.com
+
+* 파스타 리얼 서버 접속(node + mongodb): pasta admin 담당
+    ssh -i .ssh/12corp.pem ec2-user@pasta.12corp.com
+
+```sh
+    aws 이전 password 방식으로 접속했을 때:
+    #/usr/local/bin/sshpass -p 'dufentl!' ssh admin@dev.pasta.12corp.com
+    #/usr/local/bin/sshpass -p '12Ghkdlxld!@#' ssh admin@api.pasta.12corp.com
+    #/usr/local/bin/sshpass -p '12Ghkdlxld!@#' ssh admin@pasta.12corp.com
+```
+---
+### 검색 관련 툴
 
 * marval : elasticsearch 쿼리를 직접 날려볼 수 있는 웹콘솔(Oracle의 SQL*Plus or MySQL의 Workbench)
  - http://api.pasta.12corp.com:19200/_plugin/marvel/sense/
@@ -179,8 +198,12 @@
  * 현재 node 5.x version upgarde를 dev 서버까지만 함.
  * production 서버 node를 최신으로 upgrade 하려면 package.json에서 elasticsearch와 ffi로 변경하고 해야 함.
     ```json
+        {
+        ...
         "elasticsearch": "^10.0",
         "ffi": "^2.0",
+        ...
+        }
     ```
 
 --
